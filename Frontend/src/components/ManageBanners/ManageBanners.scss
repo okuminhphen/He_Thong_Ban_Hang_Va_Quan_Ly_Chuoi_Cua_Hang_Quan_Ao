@@ -1,0 +1,102 @@
+.manage-banners-container {
+  .card {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+
+    .card-header {
+      border-radius: 10px 10px 0 0 !important;
+      padding: 1rem 1.5rem;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .card-body {
+      padding: 1.5rem;
+
+      .table {
+        th {
+          font-weight: 600;
+          background-color: #f8f9fa;
+        }
+
+        td {
+          vertical-align: middle;
+
+          img {
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+
+          .btn {
+            padding: 0.25rem 0.5rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+              transform: translateY(-2px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    .modal-header {
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #dee2e6;
+
+      .modal-title {
+        font-weight: 600;
+      }
+    }
+
+    .modal-body {
+      padding: 1.5rem;
+
+      .form-label {
+        font-weight: 500;
+      }
+
+      .form-control {
+        border-radius: 5px;
+        border: 1px solid #dee2e6;
+        padding: 0.5rem 1rem;
+
+        &:focus {
+          box-shadow: none;
+          border-color: #80bdff;
+        }
+      }
+    }
+
+    .modal-footer {
+      border-top: 1px solid #dee2e6;
+      padding: 1rem 1.5rem;
+
+      .btn {
+        padding: 0.5rem 1.5rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}

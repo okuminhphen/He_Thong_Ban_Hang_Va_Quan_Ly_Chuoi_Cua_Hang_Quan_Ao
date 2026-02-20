@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chào mừng khách hàng mới</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background: #f5f7fb;
+                font-family: "Segoe UI", Arial, sans-serif;
+                color: #1f2933;
+            }
+            .wrapper {
+                width: 100%;
+                padding: 32px 12px;
+                box-sizing: border-box;
+                background: #f5f7fb;
+            }
+            .container {
+                max-width: 620px;
+                margin: 0 auto;
+                background: #ffffff;
+                border-radius: 18px;
+                overflow: hidden;
+                box-shadow: 0 16px 45px rgba(30, 62, 98, 0.18);
+                border: 1px solid #e8ecf4;
+            }
+            .header {
+                padding: 32px;
+                background: linear-gradient(120deg, #ff8a5c, #ff5d9e);
+                color: #ffffff;
+                text-align: center;
+            }
+            .header .badge {
+                display: inline-block;
+                padding: 8px 14px;
+                background: rgba(255, 255, 255, 0.15);
+                border-radius: 999px;
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 0.4px;
+                margin-bottom: 16px;
+            }
+            .header h1 {
+                margin: 0;
+                font-size: 26px;
+                line-height: 1.2;
+            }
+            .content {
+                padding: 28px 34px 10px;
+            }
+            .content p {
+                margin: 0 0 14px;
+                line-height: 1.6;
+            }
+            .info-card {
+                margin: 22px 0;
+                padding: 18px 20px;
+                border-radius: 14px;
+                background: #fef6f9;
+                border: 1px dashed #f9c6d8;
+            }
+            .info-card .label {
+                text-transform: uppercase;
+                font-size: 12px;
+                color: #9a4b63;
+                letter-spacing: 0.5px;
+                margin-bottom: 8px;
+            }
+            .info-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+                border-bottom: 1px solid #f5d4e0;
+                font-size: 15px;
+            }
+            .info-item:last-child {
+                border-bottom: none;
+            }
+            .info-item strong {
+                font-family: "SFMono-Regular", Consolas, "Liberation Mono",
+                    monospace;
+                color: #b3395b;
+                background: #fff0f5;
+                padding: 2px 6px;
+                border-radius: 6px;
+            }
+            .cta {
+                text-align: center;
+                margin: 28px 0 12px;
+            }
+            .cta a {
+                display: inline-block;
+                padding: 13px 24px;
+                background: linear-gradient(120deg, #ff8a5c, #ff5d9e);
+                color: #ffffff !important;
+                text-decoration: none;
+                border-radius: 999px;
+                font-weight: 600;
+                box-shadow: 0 10px 25px rgba(255, 113, 141, 0.35);
+            }
+            .note {
+                padding: 0 34px 26px;
+                font-size: 13px;
+                color: #5f6b7a;
+                line-height: 1.6;
+            }
+            .footer {
+                background: #f9fbff;
+                padding: 18px 32px 26px;
+                text-align: center;
+                font-size: 12px;
+                color: #94a3b8;
+                border-top: 1px solid #e6ecf7;
+            }
+            @media (max-width: 640px) {
+                .content,
+                .note {
+                    padding-left: 22px;
+                    padding-right: 22px;
+                }
+                .header {
+                    padding: 28px 18px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <div class="header">
+                    <div class="badge">Tài khoản mới</div>
+                    <h1>Chào mừng {{fullname}}</h1>
+                </div>
+                <div class="content">
+                    <p>Xin chào {{fullname}},</p>
+                    <p>
+                        Tài khoản khách hàng của bạn đã được tạo thành công.
+                        Dưới đây là thông tin đăng nhập để bạn bắt đầu trải
+                        nghiệm dịch vụ của chúng tôi.
+                    </p>
+                    <div class="info-card">
+                        <div class="label">Thông tin đăng nhập</div>
+                        <div class="info-item">
+                            <span>Email</span>
+                            <strong>{{email}}</strong>
+                        </div>
+                        <div class="info-item">
+                            <span>Username</span>
+                            <strong>{{username}}</strong>
+                        </div>
+                        <div class="info-item">
+                            <span>Mật khẩu tạm</span>
+                            <strong>{{password}}</strong>
+                        </div>
+                    </div>
+                    <div class="cta">
+                        <a href="{{loginUrl}}">Đăng nhập ngay</a>
+                    </div>
+                </div>
+                <div class="note">
+                    <p>
+                        - Vui lòng đăng nhập và đổi mật khẩu ngay ở lần truy cập
+                        đầu tiên.
+                    </p>
+                    <p>
+                        - Nếu đây không phải yêu cầu của bạn, hãy phản hồi lại
+                        email để được hỗ trợ.
+                    </p>
+                </div>
+                <div class="footer">
+                    Email này được gửi tự động, vui lòng không trả lời trực
+                    tiếp. Cần hỗ trợ? Liên hệ đội ngũ CSKH của chúng tôi.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

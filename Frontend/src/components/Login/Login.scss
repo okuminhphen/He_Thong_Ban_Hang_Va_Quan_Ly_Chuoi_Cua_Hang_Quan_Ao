@@ -1,0 +1,215 @@
+.red {
+  border: 1px solid red;
+}
+.green {
+  border: 1px solid green;
+}
+.yellow {
+  border: 1px solid yellow;
+}
+
+.login-container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+
+  // Card Styles
+  .card {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgb(0 0 0/ 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  }
+
+  // Banner Section
+  .banner-section {
+    background: linear-gradient(135deg, #8a2387 0%, #e94057 50%, #f27121 100%);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0.15;
+      background-image: url("https://images.unsplash.com/photo-1595461135849-c08a9a4967b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1868&q=80");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.75rem;
+    }
+
+    .details {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+  }
+
+  // Form Section
+  .form-section {
+    .form-floating {
+      label {
+        display: flex;
+        align-items: center;
+        color: #6c757d;
+      }
+
+      .form-control {
+        &:focus {
+          box-shadow: none;
+          border-color: #8a2387;
+        }
+      }
+    }
+
+    .invalid-feedback {
+      font-size: 0.875rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+      border: none;
+      font-weight: 500;
+
+      &:hover {
+        background: linear-gradient(to right, #7a1d77, #d9304d, #e26111);
+      }
+
+      &:disabled {
+        background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+        opacity: 0.7;
+      }
+    }
+
+    .btn-outline-primary {
+      border-color: #8a2387;
+      color: #8a2387;
+
+      &:hover {
+        background-color: #8a2387;
+        border-color: #8a2387;
+      }
+    }
+  }
+
+  // Buttons
+  .btn {
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    &.btn-primary {
+      background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+      border: none;
+
+      &:hover {
+        background: linear-gradient(to right, #7a1d77, #d93047, #e26111);
+      }
+    }
+
+    &.btn-outline-primary {
+      border-color: #8a2387;
+      color: #8a2387;
+
+      &:hover {
+        background-color: #8a2387;
+        color: white;
+      }
+    }
+  }
+
+  // Social Login Buttons
+  .social-login-buttons {
+    .btn {
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .google-btn {
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      color: #333;
+
+      &:hover {
+        background-color: #f8f9fa;
+      }
+
+      .google-icon {
+        color: #db4437;
+      }
+    }
+
+    .facebook-btn {
+      background-color: #1877f2;
+      border: none;
+      color: #fff;
+
+      &:hover {
+        background-color: #166fe5;
+      }
+    }
+  }
+
+  // ReCAPTCHA
+  .recaptcha-container {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  // Divider
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    p {
+      margin: 0 1rem;
+      color: #6c757d;
+      font-size: 0.875rem;
+    }
+  }
+
+  // Form Elements
+  .form-check {
+    margin-bottom: 1rem;
+
+    .form-check-label {
+      font-size: 0.875rem;
+      color: #6c757d;
+    }
+  }
+
+  // Links
+  .forgot-password {
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 0.875rem;
+
+    &:hover {
+      color: #8a2387;
+      text-decoration: underline;
+    }
+  }
+}

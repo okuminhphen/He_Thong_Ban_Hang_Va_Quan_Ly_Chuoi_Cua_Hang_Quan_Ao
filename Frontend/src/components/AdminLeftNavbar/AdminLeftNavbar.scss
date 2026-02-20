@@ -1,0 +1,206 @@
+.admin-left-navbar {
+  background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  overflow: hidden;
+
+  &.collapsed {
+    width: 70px;
+    width: 70px;
+
+    .sidebar-header h3 {
+      display: none;
+    }
+
+    .nav-link span {
+      display: none;
+    }
+
+    .sub-nav-link {
+      display: none;
+    }
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    flex-shrink: 0;
+
+    h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .sidebar-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 3px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  .nav {
+    padding: 0;
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.7);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+      text-decoration: none;
+
+      svg {
+        margin-right: 12px;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        min-width: 20px;
+      }
+
+      span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &:hover {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-left-color: rgba(255, 255, 255, 0.3);
+      }
+
+      &.active {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.15);
+        border-left-color: #3498db;
+        font-weight: 500;
+      }
+
+      &.sub-nav-link {
+        padding-left: 2.5rem;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        &.active {
+          background-color: rgba(255, 255, 255, 0.12);
+          border-left-color: #5dade2;
+        }
+      }
+    }
+  }
+}
+
+// Dark theme styles
+.admin-page.dark-theme {
+  .admin-left-navbar {
+    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+    .sticky-header {
+      background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+      border-bottom-color: #333;
+
+      h3 {
+        color: #e0e0e0;
+      }
+    }
+
+    .nav {
+      .nav-link {
+        color: rgba(255, 255, 255, 0.6);
+
+        &:hover {
+          color: #fff;
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        &.active {
+          color: #fff;
+          background-color: rgba(255, 255, 255, 0.15);
+          border-left-color: #667eea;
+        }
+
+        &.sub-nav-link {
+          color: rgba(255, 255, 255, 0.5);
+
+          &.active {
+            border-left-color: #8b9aff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 991.98px) {
+  .admin-left-navbar {
+    width: 70px;
+
+    .sticky-header h3 {
+      display: none;
+    }
+
+    .nav-link span {
+      display: none;
+    }
+
+    .sub-nav-link {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .admin-left-navbar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1002;
+
+    &.mobile-open {
+      transform: translateX(0);
+    }
+  }
+}

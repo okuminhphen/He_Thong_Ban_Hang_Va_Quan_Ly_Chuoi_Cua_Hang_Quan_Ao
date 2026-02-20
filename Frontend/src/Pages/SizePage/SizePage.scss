@@ -1,0 +1,46 @@
+.size-page {
+  .card {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(27, 86, 231, 0.08);
+  }
+
+  .card-header {
+    background: linear-gradient(
+      135deg,
+      rgba(13, 110, 253, 0.1),
+      rgba(13, 202, 240, 0.1)
+    );
+    border-bottom: none;
+    padding: 24px;
+
+    h3 {
+      font-weight: 600;
+    }
+  }
+
+  .search-group {
+    max-width: 420px;
+  }
+
+  .table {
+    border-radius: 10px;
+    overflow: hidden;
+
+    th {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 12px;
+    }
+  }
+
+  .status-indicator {
+    min-height: 24px;
+  }
+
+  @media (max-width: 576px) {
+    .search-group {
+      max-width: 100%;
+    }
+  }
+}

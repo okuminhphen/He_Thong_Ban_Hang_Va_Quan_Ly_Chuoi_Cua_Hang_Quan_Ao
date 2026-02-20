@@ -1,0 +1,13 @@
+.stock-request-create-page {
+  .product-item-card {
+    transition: all 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  img {
+    object-fit: cover;
+  }
+}

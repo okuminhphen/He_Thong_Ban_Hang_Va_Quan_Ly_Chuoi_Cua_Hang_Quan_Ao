@@ -1,0 +1,217 @@
+.account-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding: 2rem 0;
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+        border-radius: 2px;
+        margin: 1rem auto 0;
+      }
+    }
+
+    p {
+      color: #6c757d;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+  }
+
+  .account-card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+    .card-header {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1.5rem 2rem;
+
+      h5 {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1f2937;
+      }
+    }
+
+    .card-body {
+      padding: 2rem;
+
+      .form-group {
+        margin-bottom: 1.5rem;
+
+        label {
+          display: block;
+          font-weight: 600;
+          color: #374151;
+          margin-bottom: 0.5rem;
+          font-size: 0.9rem;
+        }
+
+        .form-control {
+          border: 1px solid #d1d5db;
+          border-radius: 8px;
+          padding: 0.75rem 1rem;
+          font-size: 0.95rem;
+          transition: all 0.2s ease;
+          background: #ffffff;
+
+          &:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            outline: none;
+          }
+
+          &:disabled {
+            background: #f9fafb;
+            color: #6b7280;
+            cursor: not-allowed;
+          }
+
+          &.is-invalid {
+            border-color: #ef4444;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+          }
+        }
+
+        textarea.form-control {
+          resize: vertical;
+          min-height: 80px;
+        }
+
+        .invalid-feedback {
+          color: #ef4444;
+          font-size: 0.875rem;
+          margin-top: 0.25rem;
+        }
+      }
+
+      .row {
+        margin-bottom: 0;
+
+        .form-group:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .btn {
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        border: none;
+
+        &.btn-primary {
+          background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+          color: white;
+
+          &:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+          }
+        }
+
+        &.w-100 {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .row {
+      .col-lg-8,
+      .col-lg-4 {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0;
+
+    .page-header {
+      margin-bottom: 2rem;
+
+      h2 {
+        font-size: 1.875rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .account-card {
+      .card-body {
+        padding: 1.5rem;
+
+        .row {
+          margin-bottom: 0;
+
+          .col-md-6 {
+            margin-bottom: 1.5rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .form-group {
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 1rem 0;
+
+    .account-card {
+      border-radius: 12px;
+
+      .card-header {
+        padding: 1.25rem 1.5rem;
+
+        h5 {
+          font-size: 1.1rem;
+        }
+      }
+
+      .card-body {
+        padding: 1.25rem;
+
+        .btn {
+          padding: 0.625rem 1.5rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
